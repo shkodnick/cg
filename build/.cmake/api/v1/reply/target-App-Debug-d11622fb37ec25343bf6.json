@@ -67,7 +67,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -arch arm64"
+					"fragment" : "-g -arch arm64"
 				}
 			],
 			"frameworks" : 
@@ -111,6 +111,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "-Wl,-rpath,/opt/homebrew/lib",
 				"role" : "libraries"

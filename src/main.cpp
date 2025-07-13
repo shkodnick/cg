@@ -53,7 +53,6 @@ unsigned int make_shader(const std::string& vertex_filepath, const std::string& 
     }
 
     return shader;
-
 }
 
 int main() {
@@ -62,6 +61,15 @@ int main() {
         std::cout << "GLFW couldn't start" << std::endl;
         return -1;
     }
+    
+    // Настройка OpenGL контекста для macOS
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+#endif
     
     // Создание окна
     GLFWwindow* window = glfwCreateWindow(640, 480, "OpenGL Window", NULL, NULL);

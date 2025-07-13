@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/feitan/cg/OpenGL/build",
+  "command": "/usr/bin/clang  -I/Users/feitan/cg/OpenGL/dependencies/glad/include -g -arch arm64 -o CMakeFiles/glad.dir/dependencies/glad/src/glad.c.o -c /Users/feitan/cg/OpenGL/dependencies/glad/src/glad.c",
+  "file": "/Users/feitan/cg/OpenGL/dependencies/glad/src/glad.c",
+  "output": "CMakeFiles/glad.dir/dependencies/glad/src/glad.c.o"
+},
+{
+  "directory": "/Users/feitan/cg/OpenGL/build",
+  "command": "/usr/bin/clang++  -I/Users/feitan/cg/OpenGL/dependencies -I/Users/feitan/cg/OpenGL/dependencies/glad/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -g -arch arm64 -o CMakeFiles/App.dir/src/main.cpp.o -c /Users/feitan/cg/OpenGL/src/main.cpp",
+  "file": "/Users/feitan/cg/OpenGL/src/main.cpp",
+  "output": "CMakeFiles/App.dir/src/main.cpp.o"
+}
+]

@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/feitan/cg/OpenGL/dependencies -I/Users/feitan/cg/OpenGL/dependencies/glad/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include
 
-CXX_FLAGSarm64 =  -arch arm64
+CXX_FLAGSarm64 = -g -arch arm64
 
-CXX_FLAGS =  -arch arm64
+CXX_FLAGS = -g -arch arm64
 

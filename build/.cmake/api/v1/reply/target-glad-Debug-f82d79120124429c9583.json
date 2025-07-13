@@ -43,7 +43,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -arch arm64"
+					"fragment" : "-g -arch arm64"
 				}
 			],
 			"includes" : 

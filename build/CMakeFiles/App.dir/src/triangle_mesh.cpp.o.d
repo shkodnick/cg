@@ -1,4 +1,6 @@
-CMakeFiles/App.dir/src/main.cpp.o: /Users/feitan/cg/OpenGL/src/main.cpp \
+CMakeFiles/App.dir/src/triangle_mesh.cpp.o: \
+  /Users/feitan/cg/OpenGL/src/triangle_mesh.cpp \
+  /Users/feitan/cg/OpenGL/src/triangle_mesh.h \
   /Users/feitan/cg/OpenGL/src/config.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__assert \
@@ -1167,5 +1169,4 @@ CMakeFiles/App.dir/src/main.cpp.o: /Users/feitan/cg/OpenGL/src/main.cpp \
   /opt/homebrew/include/glm/matrix.hpp \
   /opt/homebrew/include/glm/vector_relational.hpp \
   /opt/homebrew/include/glm/integer.hpp \
-  /opt/homebrew/include/glm/detail/func_integer.inl \
-  /Users/feitan/cg/OpenGL/src/triangle_mesh.h
+  /opt/homebrew/include/glm/detail/func_integer.inl

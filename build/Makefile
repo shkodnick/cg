@@ -190,6 +190,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/triangle_mesh.o: src/triangle_mesh.cpp.o
+.PHONY : src/triangle_mesh.o
+
+# target to build an object file
+src/triangle_mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/triangle_mesh.cpp.o
+.PHONY : src/triangle_mesh.cpp.o
+
+src/triangle_mesh.i: src/triangle_mesh.cpp.i
+.PHONY : src/triangle_mesh.i
+
+# target to preprocess a source file
+src/triangle_mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/triangle_mesh.cpp.i
+.PHONY : src/triangle_mesh.cpp.i
+
+src/triangle_mesh.s: src/triangle_mesh.cpp.s
+.PHONY : src/triangle_mesh.s
+
+# target to generate assembly for a file
+src/triangle_mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/triangle_mesh.cpp.s
+.PHONY : src/triangle_mesh.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -206,6 +230,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/triangle_mesh.o"
+	@echo "... src/triangle_mesh.i"
+	@echo "... src/triangle_mesh.s"
 .PHONY : help
 
 

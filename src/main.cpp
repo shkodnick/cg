@@ -1,47 +1,53 @@
 #include "config.h"
+#include "triangle_mesh.h"
 
+// отвечает только за чтение исходников и компиляцию одного шейдера
 unsigned int make_module(const std::string& filepath, unsigned int module_type) {
-    std::ifstream file;
-    std::stringstream bufferedLines;
-    std::string line;
+    std::ifstream file; // поток для чтения из файла
+    std::stringstream bufferedLines; // буфер строк
+    std::string line; // строка для чтения
 
-    file.open(filepath);
+    file.open(filepath); // открываем файл по пути
     while (std::getline(file, line)) {
-        bufferedLines << line << "\n";
+        bufferedLines << line << "\n"; // построчно читаем текст, аккумулируем строки в буфер, чтобы получить единый блок кода
     }
-    std::string shaderSource = bufferedLines.str();
-    const char* shaderSrc = shaderSource.c_str();
-    bufferedLines.str("");
-    file.close();
+    std::string shaderSource = bufferedLines.str(); // возвращает строку со всем кодом
+    const char* shaderSrc = shaderSource.c_str(); // преобразует строку в чары для Api openGL
+    bufferedLines.str(""); // очищает строку
+    file.close(); // закрывает файл
 
-    unsigned int shaderModule = glCreateShader(module_type);
-    glShaderSource(shaderModule, 1, &shaderSrc, NULL);
-    glCompileShader(shaderModule);
+    unsigned int shaderModule = glCreateShader(module_type); // создает объект шейдера нужного типа. Возвращает GLuint
+    glShaderSource(shaderModule, 1, &shaderSrc, NULL); // связывает ваш массив из одной C-строки (1) с этим объектом
+    // реплейсит shaderModule код на новый 
+    glCompileShader(shaderModule); // компилирует GLSL-код в машинные инструкции GPU
 
     int success;
-    glGetShaderiv(shaderModule, GL_COMPILE_STATUS, &success);
+    glGetShaderiv(shaderModule, GL_COMPILE_STATUS, &success); // проверяем скомпилился ли шейдер
     if (!success) {
         char errorLog[1024];
         glGetShaderInfoLog(shaderModule, 1024, NULL, errorLog);
         std::cout << "shader module compilation error:\n" << errorLog << std::endl;
     }
 
-    return shaderModule;
+    return shaderModule; // возвращается валидный дескриптор шейдера, который дальше будут линковать в программу
 }
 
+// берёт на себя композицию нескольких шейдеров в единый программный объект
 unsigned int make_shader(const std::string& vertex_filepath, const std::string& fragment_filepath) {
     std::vector<unsigned int> modules;
     modules.push_back(make_module(vertex_filepath, GL_VERTEX_SHADER));
     modules.push_back(make_module(fragment_filepath, GL_FRAGMENT_SHADER));
 
-    unsigned int shader = glCreateProgram();
-    for (unsigned int shaderModule : modules) {
-        glAttachShader(shader, shaderModule);
+    // в modules складываем два шейдера
+    // для каждого вызываем make_module
+    unsigned int shader = glCreateProgram(); // создаем программу, в которой объединены оба шейдера
+    for (unsigned int shaderModule : modules) { 
+        glAttachShader(shader, shaderModule); // присоединяет каждый скомпилированный шейдер к этой программе
     }
-    glLinkProgram(shader);
+    glLinkProgram(shader); // связывает вместе входы/выходы обоих шейдеров и формирует единый испольняемый модуль на gpu
 
     int success;
-    glGetProgramiv(shader, GL_LINK_STATUS, &success);
+    glGetProgramiv(shader, GL_LINK_STATUS, &success); 
     if (!success) {
         char errorLog[1024];
         glGetProgramInfoLog(shader, 1024, NULL, errorLog);
@@ -56,7 +62,6 @@ unsigned int make_shader(const std::string& vertex_filepath, const std::string& 
 }
 
 int main() {
-    // Инициализация GLFW
     if (!glfwInit()) {
         std::cout << "GLFW couldn't start" << std::endl;
         return -1;
@@ -71,7 +76,6 @@ int main() {
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
     
-    // Создание окна
     GLFWwindow* window = glfwCreateWindow(640, 480, "OpenGL Window", NULL, NULL);
     if (!window) {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -79,8 +83,6 @@ int main() {
         return -1;
     }
     
-    // Устанавливаем контекст OpenGL
-    // Нужно, чтобы все функции применялись к этому окну 
     glfwMakeContextCurrent(window);
 
     if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
@@ -90,12 +92,18 @@ int main() {
 
     glClearColor(0.6f, 0.45f, 0.6f, 1.0f);
 
+    int w, h;
+    glfwGetFramebufferSize(window, &w, &h);
+    glViewport(0,0,w,h);
+
+    TriangleMesh* triangle = new TriangleMesh();
+
     unsigned int shader = make_shader(
         "../src/shaders/vertex.txt",
         "../src/shaders/fragment.txt"
     );
     
-    while (!glfwWindowShouldClose(window)) { // возвращает !false - пока окно не закрывается
+    while (!glfwWindowShouldClose(window)) {
         // Обрабатывает события пользователя, должна вызываться в каждом кадре
         glfwPollEvents();
         
@@ -103,6 +111,8 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(shader);
+
+        triangle->draw();
         
         // Обмен буферов
         // Сначала рисует в задний буфер, затем показывает его пользователю при этом меняясь местами
@@ -110,7 +120,7 @@ int main() {
     }
     
     glDeleteProgram(shader);
-    // Освобождает ресурсы glfw
+    delete triangle;
     glfwTerminate();
     return 0;
 }

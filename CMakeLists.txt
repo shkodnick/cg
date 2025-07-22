@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(App VERSION 1.0.0)
 
+# Устанавливаем C++ стандарт
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # Устанавливаем путь к Homebrew
 set(CMAKE_PREFIX_PATH "/opt/homebrew")
 
@@ -17,7 +21,7 @@ find_package(glm REQUIRED)
 add_library(glad dependencies/glad/src/glad.c)
 target_include_directories(glad PUBLIC dependencies/glad/include)
 
-add_executable(App src/config.h src/main.cpp)
+add_executable(App src/config.h src/main.cpp src/triangle_mesh.cpp)
 
 target_include_directories(App PRIVATE dependencies)
 target_include_directories(App PRIVATE dependencies/glad/include)

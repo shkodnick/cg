@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "App.pdb"
   "CMakeFiles/App.dir/src/main.cpp.o"
   "CMakeFiles/App.dir/src/main.cpp.o.d"
+  "CMakeFiles/App.dir/src/triangle_mesh.cpp.o"
+  "CMakeFiles/App.dir/src/triangle_mesh.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

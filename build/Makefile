@@ -166,6 +166,54 @@ dependencies/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/dependencies/glad/src/glad.c.s
 .PHONY : dependencies/glad/src/glad.c.s
 
+src/config.o: src/config.cpp.o
+.PHONY : src/config.o
+
+# target to build an object file
+src/config.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/config.cpp.o
+.PHONY : src/config.cpp.o
+
+src/config.i: src/config.cpp.i
+.PHONY : src/config.i
+
+# target to preprocess a source file
+src/config.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/config.cpp.i
+.PHONY : src/config.cpp.i
+
+src/config.s: src/config.cpp.s
+.PHONY : src/config.s
+
+# target to generate assembly for a file
+src/config.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/config.cpp.s
+.PHONY : src/config.cpp.s
+
+src/linear_algs.o: src/linear_algs.cpp.o
+.PHONY : src/linear_algs.o
+
+# target to build an object file
+src/linear_algs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/linear_algs.cpp.o
+.PHONY : src/linear_algs.cpp.o
+
+src/linear_algs.i: src/linear_algs.cpp.i
+.PHONY : src/linear_algs.i
+
+# target to preprocess a source file
+src/linear_algs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/linear_algs.cpp.i
+.PHONY : src/linear_algs.cpp.i
+
+src/linear_algs.s: src/linear_algs.cpp.s
+.PHONY : src/linear_algs.s
+
+# target to generate assembly for a file
+src/linear_algs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/linear_algs.cpp.s
+.PHONY : src/linear_algs.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -189,6 +237,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/material.o: src/material.cpp.o
+.PHONY : src/material.o
+
+# target to build an object file
+src/material.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/material.cpp.o
+.PHONY : src/material.cpp.o
+
+src/material.i: src/material.cpp.i
+.PHONY : src/material.i
+
+# target to preprocess a source file
+src/material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/material.cpp.i
+.PHONY : src/material.cpp.i
+
+src/material.s: src/material.cpp.s
+.PHONY : src/material.s
+
+# target to generate assembly for a file
+src/material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/App.dir/build.make CMakeFiles/App.dir/src/material.cpp.s
+.PHONY : src/material.cpp.s
 
 src/triangle_mesh.o: src/triangle_mesh.cpp.o
 .PHONY : src/triangle_mesh.o
@@ -227,9 +299,18 @@ help:
 	@echo "... dependencies/glad/src/glad.o"
 	@echo "... dependencies/glad/src/glad.i"
 	@echo "... dependencies/glad/src/glad.s"
+	@echo "... src/config.o"
+	@echo "... src/config.i"
+	@echo "... src/config.s"
+	@echo "... src/linear_algs.o"
+	@echo "... src/linear_algs.i"
+	@echo "... src/linear_algs.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/material.o"
+	@echo "... src/material.i"
+	@echo "... src/material.s"
 	@echo "... src/triangle_mesh.o"
 	@echo "... src/triangle_mesh.i"
 	@echo "... src/triangle_mesh.s"

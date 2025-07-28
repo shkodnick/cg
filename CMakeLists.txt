@@ -21,7 +21,13 @@ find_package(glm REQUIRED)
 add_library(glad dependencies/glad/src/glad.c)
 target_include_directories(glad PUBLIC dependencies/glad/include)
 
-add_executable(App src/config.h src/main.cpp src/triangle_mesh.cpp)
+add_executable(App
+    src/config.h
+    src/config.cpp
+    src/main.cpp
+    src/triangle_mesh.cpp
+    src/material.cpp
+    src/linear_algs.cpp)
 
 target_include_directories(App PRIVATE dependencies)
 target_include_directories(App PRIVATE dependencies/glad/include)

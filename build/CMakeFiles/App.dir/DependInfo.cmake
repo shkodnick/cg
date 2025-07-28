@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/feitan/cg/OpenGL/src/config.cpp" "CMakeFiles/App.dir/src/config.cpp.o" "gcc" "CMakeFiles/App.dir/src/config.cpp.o.d"
+  "/Users/feitan/cg/OpenGL/src/linear_algs.cpp" "CMakeFiles/App.dir/src/linear_algs.cpp.o" "gcc" "CMakeFiles/App.dir/src/linear_algs.cpp.o.d"
   "/Users/feitan/cg/OpenGL/src/main.cpp" "CMakeFiles/App.dir/src/main.cpp.o" "gcc" "CMakeFiles/App.dir/src/main.cpp.o.d"
+  "/Users/feitan/cg/OpenGL/src/material.cpp" "CMakeFiles/App.dir/src/material.cpp.o" "gcc" "CMakeFiles/App.dir/src/material.cpp.o.d"
   "/Users/feitan/cg/OpenGL/src/triangle_mesh.cpp" "CMakeFiles/App.dir/src/triangle_mesh.cpp.o" "gcc" "CMakeFiles/App.dir/src/triangle_mesh.cpp.o.d"
   )
 

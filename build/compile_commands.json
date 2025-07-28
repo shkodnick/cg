@@ -7,6 +7,12 @@
 },
 {
   "directory": "/Users/feitan/cg/OpenGL/build",
+  "command": "/usr/bin/clang++  -I/Users/feitan/cg/OpenGL/dependencies -I/Users/feitan/cg/OpenGL/dependencies/glad/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -g -std=gnu++11 -arch arm64 -o CMakeFiles/App.dir/src/config.cpp.o -c /Users/feitan/cg/OpenGL/src/config.cpp",
+  "file": "/Users/feitan/cg/OpenGL/src/config.cpp",
+  "output": "CMakeFiles/App.dir/src/config.cpp.o"
+},
+{
+  "directory": "/Users/feitan/cg/OpenGL/build",
   "command": "/usr/bin/clang++  -I/Users/feitan/cg/OpenGL/dependencies -I/Users/feitan/cg/OpenGL/dependencies/glad/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -g -std=gnu++11 -arch arm64 -o CMakeFiles/App.dir/src/main.cpp.o -c /Users/feitan/cg/OpenGL/src/main.cpp",
   "file": "/Users/feitan/cg/OpenGL/src/main.cpp",
   "output": "CMakeFiles/App.dir/src/main.cpp.o"
@@ -16,5 +22,17 @@
   "command": "/usr/bin/clang++  -I/Users/feitan/cg/OpenGL/dependencies -I/Users/feitan/cg/OpenGL/dependencies/glad/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -g -std=gnu++11 -arch arm64 -o CMakeFiles/App.dir/src/triangle_mesh.cpp.o -c /Users/feitan/cg/OpenGL/src/triangle_mesh.cpp",
   "file": "/Users/feitan/cg/OpenGL/src/triangle_mesh.cpp",
   "output": "CMakeFiles/App.dir/src/triangle_mesh.cpp.o"
+},
+{
+  "directory": "/Users/feitan/cg/OpenGL/build",
+  "command": "/usr/bin/clang++  -I/Users/feitan/cg/OpenGL/dependencies -I/Users/feitan/cg/OpenGL/dependencies/glad/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -g -std=gnu++11 -arch arm64 -o CMakeFiles/App.dir/src/material.cpp.o -c /Users/feitan/cg/OpenGL/src/material.cpp",
+  "file": "/Users/feitan/cg/OpenGL/src/material.cpp",
+  "output": "CMakeFiles/App.dir/src/material.cpp.o"
+},
+{
+  "directory": "/Users/feitan/cg/OpenGL/build",
+  "command": "/usr/bin/clang++  -I/Users/feitan/cg/OpenGL/dependencies -I/Users/feitan/cg/OpenGL/dependencies/glad/include -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -g -std=gnu++11 -arch arm64 -o CMakeFiles/App.dir/src/linear_algs.cpp.o -c /Users/feitan/cg/OpenGL/src/linear_algs.cpp",
+  "file": "/Users/feitan/cg/OpenGL/src/linear_algs.cpp",
+  "output": "CMakeFiles/App.dir/src/linear_algs.cpp.o"
 }
 ]

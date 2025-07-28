@@ -72,10 +72,24 @@ include CMakeFiles/App.dir/flags.make
 CMakeFiles/App.dir/codegen:
 .PHONY : CMakeFiles/App.dir/codegen
 
+CMakeFiles/App.dir/src/config.cpp.o: CMakeFiles/App.dir/flags.make
+CMakeFiles/App.dir/src/config.cpp.o: /Users/feitan/cg/OpenGL/src/config.cpp
+CMakeFiles/App.dir/src/config.cpp.o: CMakeFiles/App.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/App.dir/src/config.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/App.dir/src/config.cpp.o -MF CMakeFiles/App.dir/src/config.cpp.o.d -o CMakeFiles/App.dir/src/config.cpp.o -c /Users/feitan/cg/OpenGL/src/config.cpp
+
+CMakeFiles/App.dir/src/config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/App.dir/src/config.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/feitan/cg/OpenGL/src/config.cpp > CMakeFiles/App.dir/src/config.cpp.i
+
+CMakeFiles/App.dir/src/config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/App.dir/src/config.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/feitan/cg/OpenGL/src/config.cpp -o CMakeFiles/App.dir/src/config.cpp.s
+
 CMakeFiles/App.dir/src/main.cpp.o: CMakeFiles/App.dir/flags.make
 CMakeFiles/App.dir/src/main.cpp.o: /Users/feitan/cg/OpenGL/src/main.cpp
 CMakeFiles/App.dir/src/main.cpp.o: CMakeFiles/App.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/App.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/App.dir/src/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/App.dir/src/main.cpp.o -MF CMakeFiles/App.dir/src/main.cpp.o.d -o CMakeFiles/App.dir/src/main.cpp.o -c /Users/feitan/cg/OpenGL/src/main.cpp
 
 CMakeFiles/App.dir/src/main.cpp.i: cmake_force
@@ -89,7 +103,7 @@ CMakeFiles/App.dir/src/main.cpp.s: cmake_force
 CMakeFiles/App.dir/src/triangle_mesh.cpp.o: CMakeFiles/App.dir/flags.make
 CMakeFiles/App.dir/src/triangle_mesh.cpp.o: /Users/feitan/cg/OpenGL/src/triangle_mesh.cpp
 CMakeFiles/App.dir/src/triangle_mesh.cpp.o: CMakeFiles/App.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/App.dir/src/triangle_mesh.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/App.dir/src/triangle_mesh.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/App.dir/src/triangle_mesh.cpp.o -MF CMakeFiles/App.dir/src/triangle_mesh.cpp.o.d -o CMakeFiles/App.dir/src/triangle_mesh.cpp.o -c /Users/feitan/cg/OpenGL/src/triangle_mesh.cpp
 
 CMakeFiles/App.dir/src/triangle_mesh.cpp.i: cmake_force
@@ -100,21 +114,55 @@ CMakeFiles/App.dir/src/triangle_mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/App.dir/src/triangle_mesh.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/feitan/cg/OpenGL/src/triangle_mesh.cpp -o CMakeFiles/App.dir/src/triangle_mesh.cpp.s
 
+CMakeFiles/App.dir/src/material.cpp.o: CMakeFiles/App.dir/flags.make
+CMakeFiles/App.dir/src/material.cpp.o: /Users/feitan/cg/OpenGL/src/material.cpp
+CMakeFiles/App.dir/src/material.cpp.o: CMakeFiles/App.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/App.dir/src/material.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/App.dir/src/material.cpp.o -MF CMakeFiles/App.dir/src/material.cpp.o.d -o CMakeFiles/App.dir/src/material.cpp.o -c /Users/feitan/cg/OpenGL/src/material.cpp
+
+CMakeFiles/App.dir/src/material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/App.dir/src/material.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/feitan/cg/OpenGL/src/material.cpp > CMakeFiles/App.dir/src/material.cpp.i
+
+CMakeFiles/App.dir/src/material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/App.dir/src/material.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/feitan/cg/OpenGL/src/material.cpp -o CMakeFiles/App.dir/src/material.cpp.s
+
+CMakeFiles/App.dir/src/linear_algs.cpp.o: CMakeFiles/App.dir/flags.make
+CMakeFiles/App.dir/src/linear_algs.cpp.o: /Users/feitan/cg/OpenGL/src/linear_algs.cpp
+CMakeFiles/App.dir/src/linear_algs.cpp.o: CMakeFiles/App.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/App.dir/src/linear_algs.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/App.dir/src/linear_algs.cpp.o -MF CMakeFiles/App.dir/src/linear_algs.cpp.o.d -o CMakeFiles/App.dir/src/linear_algs.cpp.o -c /Users/feitan/cg/OpenGL/src/linear_algs.cpp
+
+CMakeFiles/App.dir/src/linear_algs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/App.dir/src/linear_algs.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/feitan/cg/OpenGL/src/linear_algs.cpp > CMakeFiles/App.dir/src/linear_algs.cpp.i
+
+CMakeFiles/App.dir/src/linear_algs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/App.dir/src/linear_algs.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/feitan/cg/OpenGL/src/linear_algs.cpp -o CMakeFiles/App.dir/src/linear_algs.cpp.s
+
 # Object files for target App
 App_OBJECTS = \
+"CMakeFiles/App.dir/src/config.cpp.o" \
 "CMakeFiles/App.dir/src/main.cpp.o" \
-"CMakeFiles/App.dir/src/triangle_mesh.cpp.o"
+"CMakeFiles/App.dir/src/triangle_mesh.cpp.o" \
+"CMakeFiles/App.dir/src/material.cpp.o" \
+"CMakeFiles/App.dir/src/linear_algs.cpp.o"
 
 # External object files for target App
 App_EXTERNAL_OBJECTS =
 
+App: CMakeFiles/App.dir/src/config.cpp.o
 App: CMakeFiles/App.dir/src/main.cpp.o
 App: CMakeFiles/App.dir/src/triangle_mesh.cpp.o
+App: CMakeFiles/App.dir/src/material.cpp.o
+App: CMakeFiles/App.dir/src/linear_algs.cpp.o
 App: CMakeFiles/App.dir/build.make
 App: /opt/homebrew/lib/libglfw.3.4.dylib
 App: libglad.a
 App: CMakeFiles/App.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable App"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/feitan/cg/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable App"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

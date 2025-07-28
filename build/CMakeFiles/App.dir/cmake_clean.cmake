@@ -1,8 +1,14 @@
 file(REMOVE_RECURSE
   "App"
   "App.pdb"
+  "CMakeFiles/App.dir/src/config.cpp.o"
+  "CMakeFiles/App.dir/src/config.cpp.o.d"
+  "CMakeFiles/App.dir/src/linear_algs.cpp.o"
+  "CMakeFiles/App.dir/src/linear_algs.cpp.o.d"
   "CMakeFiles/App.dir/src/main.cpp.o"
   "CMakeFiles/App.dir/src/main.cpp.o.d"
+  "CMakeFiles/App.dir/src/material.cpp.o"
+  "CMakeFiles/App.dir/src/material.cpp.o.d"
   "CMakeFiles/App.dir/src/triangle_mesh.cpp.o"
   "CMakeFiles/App.dir/src/triangle_mesh.cpp.o.d"
 )
